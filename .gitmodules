@@ -1,0 +1,12 @@
+[submodule "opensbi"]
+	path = opensbi
+	url = https://github.com/starfive-tech/opensbi.git
+	branch = JH7110_VisionFive2_devel
+[submodule "u-boot"]
+	path = u-boot
+	url = https://github.com/chiahsuantw/u-boot-vf2.git
+	branch = osc-support
+[submodule "tools"]
+	path = tools
+	url = https://github.com/starfive-tech/Tools.git
+	branch = master
