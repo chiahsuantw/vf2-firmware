@@ -4,7 +4,7 @@
 	branch = JH7110_VisionFive2_devel
 [submodule "u-boot"]
 	path = u-boot
-	url = https://github.com/chiahsuantw/u-boot-vf2.git
+	url = https://github.com/chiahsuantw/vf2-uboot.git
 	branch = osc-support
 [submodule "tools"]
 	path = tools

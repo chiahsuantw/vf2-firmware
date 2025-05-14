@@ -7,6 +7,8 @@ OPENSBI_DIR := $(CURDIR)/opensbi
 UBOOT_ITS_DIR := $(CURDIR)/tools/uboot_its
 GENIMAGE_DIR := $(CURDIR)/genimage
 
+all: build genimage
+
 build: uboot spl_tool opensbi fw_payload
 
 uboot:
@@ -33,7 +35,7 @@ fw_payload:
 	rm ${UBOOT_ITS_DIR}/fw_payload.bin
 	mv ${UBOOT_ITS_DIR}/visionfive2_fw_payload.img .
 
-genimage: build
+genimage:
 	genimage --config genimage-vf2.cfg --inputpath . --outputpath .
 
 clean:
@@ -44,3 +46,4 @@ clean:
 	rm -f visionfive2_fw_payload.img
 	rm -f starfive-visionfive2-vfat.part
 	rm -f sdcard.img
+	rm -f u-boot.cfg.tmp
